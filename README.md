@@ -6,7 +6,7 @@ De "icon" UI component van Webuniversum Vlaanderen als Web Component
 npm install --save vl-ui-icon
 ```
 
-## demo
+## Demo
 ```
 npm run demo
 ```
