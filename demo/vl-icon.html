@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>vl-icon voorbeeld</title>
+    </head>
+
+    <script type="module" src="../vl-icon.src.js"></script>
+
+    <style>
+        body {
+            padding: 1.5rem;
+            width: 1250px;
+        }
+
+        div:not(:first-child) {
+            margin-top: 3rem;
+        }
+    </style>
+    
+	<body>
+        <p>Webuniversum: </p>
+        <span class="vl-icon vl-vi vl-vi-calendar vl-icon--small" aria-hidden="true"></span>
+        <span class="vl-icon vl-vi vl-vi-calendar" aria-hidden="true"></span>
+        <span class="vl-icon vl-vi vl-vi-calendar vl-icon--large" aria-hidden="true"></span>
+
+        <p class="">Web Component:</p>
+        <vl-icon icon="calendar" size="small"></vl-icon>
+        <vl-icon icon="calendar"></vl-icon>
+        <vl-icon icon="calendar" size="large"></vl-icon>
+	</body>
+</html>
