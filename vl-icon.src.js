@@ -1,71 +1,36 @@
+import { VlElement } from './node_modules/vl-ui-core/vl-core.src.js';
+
 /**
  * vl-icon
- *
- * <span class="vl-icon vl-icon--small vl-vi vl-vi-calendar" aria-hidden="true"></span>
- * ...wordt...
- * <vl-icon icon="calendar" size="small"></vl-icon>
- *
  * De wrapper class "vl-icon-wrapper" wordt NIET in deze Web Component geïmplementeerd
  *
  * @demo demo/vl-icon.html
  */
-import './node_modules/vl-ui-core/vl-core.src.js';
-
-
-customElements.define('vl-icon', class extends HTMLElement {
-
+export class VlIcon extends VlElement {
     constructor() {
-
-        // (always call super first)
-        super();
-
-        // Create shadow root
-        this._shadow = this.attachShadow({mode: 'open'});
-        this._shadow.innerHTML = `
-          <style>
-            @import "../style.css";
-          </style>
-          <span class="vl-icon vl-vi" aria-hidden="true"></span>
-        `;
-        this._el = this._shadow.querySelector(".vl-icon");
+        super(`
+            <style>
+                @import "../style.css";
+            </style>
+            <span class="vl-icon vl-vi" aria-hidden="true"></span>
+        `);
     }
 
-
-
-    //observed attributes
-    static get observedAttributes() {return ['icon','size']; }
-
-
-    // Respond to attribute changes
-    attributeChangedCallback(attr, oldValue, newValue) {
-        switch (attr) {
-            case 'icon':
-                this._iconChangedCallback(oldValue,newValue);
-                break;
-            case 'size':
-                this._sizeChangedCallback(oldValue,newValue);
-                break;
-            default:
-                break;
-        }
-
+    static get _observedAttributes() {
+        return ['icon','size'];
     }
 
-
-    _iconChangedCallback(oldValue,newValue) {
-        this._el.classList.remove('vl-vi-' + oldValue);
-        if (newValue){
-            this._el.classList.add('vl-vi-' + newValue);
-        }
+    _iconChangedCallback(oldValue, newValue) {
+        this._changeClass(this._element, ('vl-vi-' + oldValue), ('vl-vi-' + newValue));
     };
 
-
-    _sizeChangedCallback(oldValue,newValue) {
-        this._el.classList.remove('vl-icon--' + oldValue);
-        if (newValue == "small" || newValue == "large"){
-            this._el.classList.add('vl-icon--' + newValue);
+    _sizeChangedCallback(oldValue, newValue) {
+        if (['small', 'large'].indexOf(newValue) >= 0) {
+            this._changeClass(this._element, ('vl-icon--' + oldValue), ('vl-icon--' + newValue));
+        } else {
+            this._element.classList.remove('vl-icon--' + oldValue);
         }
     };
+}
 
-
-});
+customElements.define('vl-icon', VlIcon);
