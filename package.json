@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponent-vl-ui-icon/issues"
   },
-  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-icon#readme"
+  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-icon#readme",
+  "publishConfig": {
+    "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
+  }
 }
