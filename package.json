@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-icon",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "De \"icon\" UI component van Webuniversum Vlaanderen als Web Component",
   "main": "vl-icon.js",
   "repository": {
