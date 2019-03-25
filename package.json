@@ -15,10 +15,10 @@
     "prepare:build": "uglifyjs --compress --mangle --output vl-icon.js -- *.src.js",
     "test": "wct -l chrome,firefox --npm",
     "release": "np",
-    "release:prepare": "npm run release:prepare:update && npm run release:prepare:css && npm run release:prepare:core && npm run release:prepare:commit",
+    "release:prepare": "set vl-ui-core_version = npm info vl-ui-core version && npm run release:prepare:update && npm run release:prepare:css && npm run release:prepare:core && npm run release:prepare:commit",
     "release:prepare:update": "git fetch && git pull",
     "release:prepare:css": "replace '\\.\\./style.css' https://cdn.milieuinfo.be/vl-ui-icon/$release_version/style.css vl-icon.js",
-    "release:prepare:core": "replace './node_modules/vl-ui-core/vl-core.src.js' https://cdn.milieuinfo.be/vl-ui-icon/$release_version/node_modules/vl-ui-core/vl-core.js vl-icon.js",
+    "release:prepare:core": "replace './node_modules/vl-ui-core/vl-core.src.js' 'https://cdn.milieuinfo.be/vl-ui-core/$vl-ui-core_version/vl-core.js' vl-icon.js",
     "release:prepare:commit": "git add vl-icon.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
     "demo": "http-server"
