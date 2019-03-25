@@ -18,7 +18,7 @@
     "release:prepare:build": "uglifyjs --compress --mangle --output vl-icon.js -- *.src.js",
     "release:prepare:css": "replace '\\.\\./style.css' https://cdn.milieuinfo.be/vl-ui-icon/$release_version/style.css vl-icon.js",
     "release:prepare:core": "replace './node_modules/vl-ui-core/vl-core.src.js' 'https://cdn.milieuinfo.be/vl-ui-core/1.1.0/vl-core.js' vl-icon.js",
-    "release:prepare:commit": "git add vl-icon.js && git commit --amend --no-edit && git pull",
+    "release:prepare:commit": "git add -f vl-icon.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
     "demo": "http-server"
   },
