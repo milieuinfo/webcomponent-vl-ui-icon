@@ -1,6 +1,6 @@
-import{VlElement}from"https://cdn.milieuinfo.be/vl-ui-icon/0.1.0/node_modules/vl-ui-core/vl-core.js";export class VlIcon extends VlElement{constructor(){super(`
+import{VlElement}from"./node_modules/vl-ui-core/vl-core.src.js";export class VlIcon extends VlElement(HTMLElement){static get _observedAttributes(){return["icon","size"]}static get _observedChildClassAttributes(){return["before","after"]}constructor(){super(`
             <style>
-                @import "https://cdn.milieuinfo.be/vl-ui-icon/0.1https://cdn.milieuinfo.be/vl-ui-icon/0.2.0/style.css";
+                @import "https://cdn.milieuinfo.be/vl-ui-icon//style.css";
             </style>
             <span class="vl-icon vl-vi" aria-hidden="true"></span>
-        `)}static get _observedAttributes(){return["icon","size"]}_iconChangedCallback(oldValue,newValue){this._changeClass(this._element,"vl-vi-"+oldValue,"vl-vi-"+newValue)}_sizeChangedCallback(oldValue,newValue){if(["small","large"].indexOf(newValue)>=0){this._changeClass(this._element,"vl-icon--"+oldValue,"vl-icon--"+newValue)}else{this._element.classList.remove("vl-icon--"+oldValue)}}};customElements.define("vl-icon",VlIcon);
+        `)}get _classPrefix(){return"vl-icon--"}_iconChangedCallback(oldValue,newValue){this._changeClass(this._element,oldValue,newValue,"vl-vi-")}_sizeChangedCallback(oldValue,newValue){if(["small","large"].indexOf(newValue)>=0){this._changeClass(this._element,oldValue,newValue)}else{this._element.classList.remove(this._prefix+oldValue)}}};customElements.define("vl-icon",VlIcon);
