@@ -1,4 +1,4 @@
-import { VlElement } from './node_modules/vl-ui-core/vl-core.src.js';
+import { VlElement } from '/node_modules/vl-ui-core/vl-core.src.js';
 
 /**
  * vl-icon
@@ -6,7 +6,15 @@ import { VlElement } from './node_modules/vl-ui-core/vl-core.src.js';
  *
  * @demo demo/vl-icon.html
  */
-export class VlIcon extends VlElement {
+export class VlIcon extends VlElement(HTMLElement) {
+    static get _observedAttributes() {
+        return ['icon', 'size'];
+    }
+
+    static get _observedChildClassAttributes() {
+        return ['before', 'after'];
+    }
+
     constructor() {
         super(`
             <style>
@@ -16,19 +24,19 @@ export class VlIcon extends VlElement {
         `);
     }
 
-    static get _observedAttributes() {
-        return ['icon','size'];
+    get _classPrefix() {
+        return 'vl-icon--';
     }
 
     _iconChangedCallback(oldValue, newValue) {
-        this._changeClass(this._element, ('vl-vi-' + oldValue), ('vl-vi-' + newValue));
+        this._changeClass(this._element, oldValue, newValue, 'vl-vi-');
     };
 
     _sizeChangedCallback(oldValue, newValue) {
         if (['small', 'large'].indexOf(newValue) >= 0) {
-            this._changeClass(this._element, ('vl-icon--' + oldValue), ('vl-icon--' + newValue));
+            this._changeClass(this._element, oldValue, newValue);
         } else {
-            this._element.classList.remove('vl-icon--' + oldValue);
+            this._element.classList.remove(this._prefix + oldValue);
         }
     };
 }
