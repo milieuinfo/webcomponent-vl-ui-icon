@@ -1,4 +1,4 @@
-import{VlElement}from"https://cdn.milieuinfo.be/vl-ui-core/1.0.0/vl-core.js";export class VlIcon extends VlElement(HTMLElement){static get _observedAttributes(){return["icon","size"]}static get _observedChildClassAttributes(){return["before","after"]}constructor(){super(`
+import{VlElement}from"/node_modules/vl-ui-core/vl-core.js";export class VlIcon extends VlElement(HTMLElement){static get _observedAttributes(){return["icon","size"]}static get _observedChildClassAttributes(){return["before","after"]}constructor(){super(`
             <style>
                 @import "https://cdn.milieuinfo.be/vl-ui-icon/0.2.0/style.css";
             </style>
