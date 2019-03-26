@@ -12,6 +12,11 @@ npm install --save vl-ui-icon
 npm run demo
 ```
 
+## Kanttekening
+Niet geïmplementeerd
+* light versie ("vl-icon--light" class)
+* wrapper class ("vl-icon-wrapper" class)
+
 ## Credits
 Zie de lijst van [ontwikkelaars](https://github.com/milieuinfo/webcomponent-vl-ui-icon/graphs/contributors) die meegewerkt hebben aan de webcomponent.
 
