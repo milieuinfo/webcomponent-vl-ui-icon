@@ -1,4 +1,4 @@
-# <vl-icon> Web Component
+# "vl-icon" Web Component
 De ["icon" component van Webuniversum Vlaanderen](https://overheid.vlaanderen.be/webuniversum/v3/documentation/atoms/vl-ui-icon) als Web Component
 
 
