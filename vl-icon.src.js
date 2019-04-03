@@ -19,6 +19,10 @@ export class VlIcon extends VlElement(HTMLElement) {
         super(`
             <style>
                 @import "../style.css";
+
+                .vl-icon:before {
+                    vertical-align: middle;
+                }
             </style>
             <span class="vl-icon vl-vi" aria-hidden="true"></span>
         `);
