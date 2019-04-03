@@ -14,7 +14,6 @@ npm run demo
 
 ## Kanttekening
 Niet geïmplementeerd
-* light versie ("vl-icon--light" class)
 * wrapper class ("vl-icon-wrapper" class)
 
 ## Credits

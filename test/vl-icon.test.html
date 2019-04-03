@@ -29,21 +29,20 @@
 
             test('bevat span met juiste size class', () => {
                 const icon = fixture('vl-icon-fixture');
-                var iconSize = "small";
+                ['small', 'large'].forEach((iconSize) => {
+                    icon.setAttribute('size', iconSize);
+                    assert.isTrue(icon.shadowRoot.querySelector("span").classList.contains("vl-icon--" + iconSize));
+                });
+
+                const iconSize = 'bla';
                 icon.setAttribute('size', iconSize);
-                assert.isTrue(icon.shadowRoot.querySelector("span").classList.contains("vl-icon--" + iconSize))
-                iconSize = "large";
-                icon.setAttribute('size', iconSize);
-                assert.isTrue(icon.shadowRoot.querySelector("span").classList.contains("vl-icon--" + iconSize))
-                iconSize = "bla";
-                icon.setAttribute('size', iconSize);
-                assert.isFalse(icon.shadowRoot.querySelector("span").classList.contains("vl-icon--" + iconSize))
+                assert.isFalse(icon.shadowRoot.querySelector("span").classList.contains("vl-icon--" + iconSize));
             });
 
             test('krijgt de juiste class wanneer het icon een attribuut bevat', () => {
                 const icon = fixture('vl-icon-fixture');
                 const spanElement = icon.shadowRoot.querySelector("span");
-                ['before', 'after'].forEach((attribuut) => {
+                ['before', 'after', 'light'].forEach((attribuut) => {
                     assert.isFalse(spanElement.classList.contains('vl-icon--' + attribuut));
                     icon.setAttribute(attribuut, '');
                     assert.isTrue(spanElement.classList.contains('vl-icon--' + attribuut));
