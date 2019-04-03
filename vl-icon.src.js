@@ -12,7 +12,7 @@ export class VlIcon extends VlElement(HTMLElement) {
     }
 
     static get _observedChildClassAttributes() {
-        return ['before', 'after'];
+        return ['before', 'after', 'light'];
     }
 
     constructor() {
