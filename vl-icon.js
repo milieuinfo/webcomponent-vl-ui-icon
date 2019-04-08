@@ -1,6 +1,6 @@
 import{VlElement}from"/node_modules/vl-ui-core/vl-core.js";export class VlIcon extends VlElement(HTMLElement){static get _observedAttributes(){return["icon","size"]}static get _observedChildClassAttributes(){return["before","after","light"]}constructor(){super(`
             <style>
-                @import "https://cdn.milieuinfo.be/vl-ui-icon/1.0.0/style.css";
+                @import "/node_modules/vl-ui-icon/style.css";
 
                 .vl-icon:before {
                     vertical-align: middle;
