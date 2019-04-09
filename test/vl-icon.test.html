@@ -42,7 +42,7 @@
             test('ondersteunt 90 en 180 graden rotatie', () => {
                 const icon = fixture('vl-icon-fixture');
                 ['90deg', '180deg'].forEach(value => {
-                    icon.setAttribute(value);
+                    icon.setAttribute(value, '');
                     assert.isTrue(icon.shadowRoot.querySelector("span").classList.contains("vl-vi-u-" + value));
                 });
             });
