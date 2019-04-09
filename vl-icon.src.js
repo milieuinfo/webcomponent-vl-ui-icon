@@ -1,4 +1,4 @@
-import { VlElement } from '/node_modules/vl-ui-core/vl-core.src.js';
+import { VlElement } from '/node_modules/vl-ui-core/vl-core.js';
 
 /**
  * vl-icon
@@ -11,12 +11,14 @@ import { VlElement } from '/node_modules/vl-ui-core/vl-core.src.js';
  * `ligt`| Wordt gebruikt om het icoon een lichte kleur te geven? | { boolean }
  * `before` | Wordt gebruikt wanneer het icoon voor een tekst staat en er wat ruimte tussen het icoon en de tekst getoond moet worden. | { boolean }
  * `after` | Wordt gebruikt wanneer het icoon achter een tekst staat en er wat ruimte tussen het icoon en de tekst getoond moet worden. | { boolean }
+ * `90deg` | Wordt gebruikt om het icoon 90 graden te roteren. | { boolean }
+ * `180deg` | Wordt gebruikt om het icoon 180 graden te roteren. | { boolean }
  *
  * @demo demo/vl-icon.html
  */
 export class VlIcon extends VlElement(HTMLElement) {
     static get _observedAttributes() {
-        return ['icon', 'size'];
+        return ['icon', 'size', '90deg', '180deg'];
     }
 
     static get _observedChildClassAttributes() {
@@ -51,6 +53,14 @@ export class VlIcon extends VlElement(HTMLElement) {
             this._element.classList.remove(this._prefix + oldValue);
         }
     };
+
+    _90degChangedCallback(oldValue, newValue) {
+        this._toggleClass(this._element, newValue, 'vl-vi-u-90deg');
+    }
+
+    _180degChangedCallback(oldValue, newValue) {
+        this._toggleClass(this._element, newValue, 'vl-vi-u-180deg');
+    }
 }
 
 customElements.define('vl-icon', VlIcon);

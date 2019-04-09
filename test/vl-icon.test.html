@@ -39,6 +39,14 @@
                 assert.isFalse(icon.shadowRoot.querySelector("span").classList.contains("vl-icon--" + iconSize));
             });
 
+            test('ondersteunt 90 en 180 graden rotatie', () => {
+                const icon = fixture('vl-icon-fixture');
+                ['90deg', '180deg'].forEach(value => {
+                    icon.setAttribute(value);
+                    assert.isTrue(icon.shadowRoot.querySelector("span").classList.contains("vl-vi-u-" + value));
+                });
+            });
+
             test('krijgt de juiste class wanneer het icon een attribuut bevat', () => {
                 const icon = fixture('vl-icon-fixture');
                 const spanElement = icon.shadowRoot.querySelector("span");
