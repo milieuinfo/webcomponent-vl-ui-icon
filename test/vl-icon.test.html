@@ -16,6 +16,13 @@
         </template>
     </test-fixture>
 
+    <test-fixture id="vl-icon-fixture-deg">
+        <template>
+            <vl-icon 90deg></vl-icon>
+            <vl-icon 180deg></vl-icon>
+        </template>
+    </test-fixture>
+
     <script>
         suite('<vl-icon>', () => {
             const should = chai.should();
@@ -40,11 +47,9 @@
             });
 
             test('ondersteunt 90 en 180 graden rotatie', () => {
-                const icon = fixture('vl-icon-fixture');
-                ['90deg', '180deg'].forEach(value => {
-                    icon.setAttribute(value, '');
-                    assert.isTrue(icon.shadowRoot.querySelector("span").classList.contains("vl-vi-u-" + value));
-                });
+                const icon = fixture('vl-icon-fixture-deg');
+                assert.isTrue(icon[0].shadowRoot.querySelector("span").classList.contains("vl-vi-u-90deg"));
+                assert.isTrue(icon[1].shadowRoot.querySelector("span").classList.contains("vl-vi-u-180deg"));
             });
 
             test('krijgt de juiste class wanneer het icon een attribuut bevat', () => {
