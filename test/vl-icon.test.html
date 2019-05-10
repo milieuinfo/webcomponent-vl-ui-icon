@@ -40,6 +40,11 @@
                 assert.isTrue(icon.classList.contains('vl-vi'));
             });
 
+            test('bevat het aria-hidden attribuut', () => {
+                const icon = fixture('vl-icon-fixture');
+                assert.isTrue(!!icon.getAttribute('aria-hidden'));
+            });
+
             test('heeft de juiste icon class', () => {
                 const icon = fixture('vl-icon-fixture');
                 const iconName = "calendar";
