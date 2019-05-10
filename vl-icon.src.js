@@ -25,7 +25,8 @@ export class VlIcon extends NativeVlElement(HTMLSpanElement) {
         return ['before', 'after', 'light'];
     }
 
-    connectedCallback() {
+    constructor() {
+        super();
         this.classList.add('vl-icon');
         this.classList.add('vl-vi');
         this.setAttribute('aria-hidden', true);
