@@ -35,6 +35,10 @@ export class VlIcon extends NativeVlElement(HTMLSpanElement) {
         return 'vl-icon--';
     }
 
+    get _stylePath() {
+        return '../style.css';
+    }
+
     _iconChangedCallback(oldValue, newValue) {
         this._changeClass(this._element, oldValue, newValue, 'vl-vi-');
     };
