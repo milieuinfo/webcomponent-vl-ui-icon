@@ -37,7 +37,7 @@
             const should = chai.should();
 
             suiteSetup((done) => {
-                VlRegisterElement(() => {
+                return VlRegisterElement(() => {
                     done();
                 });
             });
