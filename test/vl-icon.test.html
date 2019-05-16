@@ -37,10 +37,11 @@
             suiteSetup((done) => {
                 setTimeout(() => {
                     done();
-                });
+                }, 2000);
             });
 
             test('heeft de vl-icon en vl-vi class', () => {
+                console.log('patat');
                 const icon = fixture('vl-icon-fixture');
                 assert.isTrue(icon.classList.contains('vl-icon'));
                 assert.isTrue(icon.classList.contains('vl-vi'));
