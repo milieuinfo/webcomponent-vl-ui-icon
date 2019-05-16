@@ -38,7 +38,9 @@
 
             suiteSetup((done) => {
                 VlRegisterElement(() => {
-                    done();
+                    setTimeout(() => {
+                        done();
+                    }, 2500);
                 });
             });
 
