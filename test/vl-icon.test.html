@@ -30,14 +30,12 @@
         </template>
     </test-fixture>
 
-    <script type="module">
-        import { VlRegisterElement } from '/node_modules/vl-ui-core/vl-core.js';
-
+    <script>
         suite('<vl-icon>', () => {
             const should = chai.should();
 
             suiteSetup((done) => {
-                VlRegisterElement(() => {
+                setTimeout(() => {
                     done();
                 });
             });
