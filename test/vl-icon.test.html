@@ -30,18 +30,21 @@
         </template>
     </test-fixture>
 
-    <script>
+    <script type="module">
+        import { VlRegisterElement } from '/node_modules/vl-ui-core/vl-core.js';
+
         suite('<vl-icon>', () => {
             const should = chai.should();
 
             suiteSetup((done) => {
-                setTimeout(() => {
-                    done();
-                }, 2000);
+                VlRegisterElement(() => {
+                    setTimeout(() => {
+                        done();
+                    });
+                });
             });
 
             test('heeft de vl-icon en vl-vi class', () => {
-                console.log('patat');
                 const icon = fixture('vl-icon-fixture');
                 assert.isTrue(icon.classList.contains('vl-icon'));
                 assert.isTrue(icon.classList.contains('vl-vi'));
