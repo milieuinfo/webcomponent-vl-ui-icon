@@ -37,13 +37,9 @@
             const should = chai.should();
 
             suiteSetup((done) => {
-                setTimeout(() => {
-                    VlRegisterElement(() => {
-                        setTimeout(() => {
-                            done();
-                        }, 2500);
-                    });
-                }, 2500);
+                VlRegisterElement(() => {
+                    done();
+                });
             });
 
             test('heeft de vl-icon en vl-vi class', () => {
