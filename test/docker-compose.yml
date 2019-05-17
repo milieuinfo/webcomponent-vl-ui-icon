@@ -15,7 +15,6 @@ services:
     depends_on:
       - selenium-hub
       - selenium-chrome
-      - selenium-firefox
     working_dir: /workdir
     volumes:
       - ${HOME:-.}/.npmrc:/root/.npmrc:ro
