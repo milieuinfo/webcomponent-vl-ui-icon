@@ -3,7 +3,7 @@ import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
 /**
  * VlIcon
  * @class
- * @classdesc Gebruik de vl-icon om een extra visueel element toe te voegen. <a href="demo/vl-icon.html">Demo</a>.
+ * @classdesc Gebruik de vl-icon om een extra visueel element toe te voegen.
  * 
  * @extends NativeVlElement
  * 
@@ -15,6 +15,9 @@ import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
  * @property {boolean} 90deg - Attribuut wordt gebruikt om het icoon 90 graden te roteren.
  * @property {boolean} 180deg - Attribuut wordt gebruikt om het icoon 180 graden te roteren.
  * @property {boolean} link - Attribuut moet gebruikt worden wanneer het icoon binnen een a tag gebruikt wordt zodat de stijl goed is.
+ * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-icon/releases/latest|Release notes}
+ * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-icon/issues|Issues}
+ * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-icon.html|Demo}
  */
 export class VlIcon extends NativeVlElement(HTMLSpanElement) {
     static get _observedAttributes() {
