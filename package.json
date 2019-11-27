@@ -2,7 +2,7 @@
   "name": "vl-ui-icon",
   "version": "2.1.0",
   "description": "De \"icon\" UI component van Webuniversum Vlaanderen als Web Component",
-  "main": "vl-icon.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milieuinfo/webcomponent-vl-ui-icon.git"
