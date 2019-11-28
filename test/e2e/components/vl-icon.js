@@ -23,6 +23,26 @@ class VlIcon extends VlElement {
     async isAfter() {
         return this.hasAttribute('after');
     }
+
+    async isSmall() {
+        return this.getAttribute('size').then((size) => { return size == 'small' });
+    }
+
+    async isLarge() {
+        return this.getAttribute('size').then((size) => { return size == 'large' });
+    }
+
+    async isLight() {
+        return this.hasAttribute('light');
+    }
+
+    async is90Degrees() {
+        return this.hasAttribute('90deg');
+    }
+
+    async is180Degrees() {
+        return this.hasAttribute('180deg');
+    }
 }
 
 module.exports = VlIcon;
