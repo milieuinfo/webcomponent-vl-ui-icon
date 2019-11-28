@@ -24,13 +24,17 @@ class VlIcon extends VlElement {
         return this.hasAttribute('after');
     }
 
-    async isSmall() {
-        return this.getAttribute('size').then((size) => { return size == 'small' });
+    async getSize() {
+        return this.getAttribute('size');
     }
 
-    async isLarge() {
-        return this.getAttribute('size').then((size) => { return size == 'large' });
-    }
+    async isSmallSize() {
+        return (await this.getSize()) === 'small';
+     }
+     
+     async isLargeSize() {
+        return (await this.getSize()) === 'large';
+     }
 
     async isLight() {
         return this.hasAttribute('light');
