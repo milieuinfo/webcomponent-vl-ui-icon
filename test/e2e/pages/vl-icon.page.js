@@ -7,6 +7,10 @@ class VlIconPage extends Page {
         return new VlIcon(this.driver, selector);
     }
 
+    async getIcon() {
+        return this._getIcon('#icon');
+    }
+
     async getSmallIcon() {
         return this._getIcon('#icon-small');
     }
