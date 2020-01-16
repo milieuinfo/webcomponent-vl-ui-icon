@@ -42,7 +42,7 @@
   "devDependencies": {
     "@govflanders/vl-ui-icon": "3.9.1",
     "@govflanders/vl-ui-util": "3.9.1",
-    "vl-ui-util": "^3.4.1"
+    "vl-ui-util": "^3.4.2"
   },
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponent-vl-ui-icon/issues"
