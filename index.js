@@ -1,3 +1,5 @@
+const { VlIcon } = require('./vl-icon.src.js');
+
 module.exports = { 
-    'VlIcon': require('./test/e2e/components/vl-icon')
+    VlIcon
 }
