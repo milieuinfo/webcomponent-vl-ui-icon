@@ -34,10 +34,10 @@
     "demo": "http-server"
   },
   "dependencies": {
-    "vl-ui-core": "^2.2.6"
+    "vl-ui-core": "milieuinfo/webcomponent-vl-ui-core#ovam-poc"
   },
   "peerDependencies": {
-    "vl-ui-core": "^2.0.0"
+    "vl-ui-core": "milieuinfo/webcomponent-vl-ui-core#ovam-poc"
   },
   "devDependencies": {
     "@govflanders/vl-ui-icon": "3.9.1",
