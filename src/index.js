@@ -1,3 +1,3 @@
 module.exports = { 
-    VlIcon: require('../vl-icon.src.js')
+    VlIcon: require('../vl-icon.src.js').VlIcon
 }
