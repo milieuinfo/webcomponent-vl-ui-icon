@@ -1,5 +1,5 @@
 
-const { assert, driver } = require('vl-ui-core').Test;
+const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VlIconPage = require('./pages/vl-icon.page');
 
 describe('vl-icon', async () => {
@@ -56,5 +56,12 @@ describe('vl-icon', async () => {
         const iconAfter = await vlIconPage.getIconAfter();
         await assert.eventually.isFalse(icon.isAfter());
         await assert.eventually.isTrue(iconAfter.isAfter());
+    });
+
+    after((done) => { 
+        if (driver) {
+            driver.quit();
+        }
+        done();
     });
 });
