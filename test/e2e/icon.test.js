@@ -57,11 +57,4 @@ describe('vl-icon', async () => {
         await assert.eventually.isFalse(icon.isAfter());
         await assert.eventually.isTrue(iconAfter.isAfter());
     });
-
-    after((done) => { 
-        if (driver) {
-            driver.quit();
-        }
-        done();
-    });
 });
