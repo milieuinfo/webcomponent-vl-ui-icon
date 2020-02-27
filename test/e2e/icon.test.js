@@ -9,6 +9,11 @@ describe('vl-icon', async () => {
         return vlIconPage.load();
     });
 
+    it('als gebruiker kan ik een icoon zien', async () => {
+        const icon = await vlIconPage.getIcon();
+        await assert.eventually.equal(icon.getType(), 'calendar');
+    });
+
     it('als gebruiker wil ik het verschil kunnen zien tussen een klein en een gewoon icon', async () => {
         const icon = await vlIconPage.getIcon();
         const smallIcon = await vlIconPage.getSmallIcon();
