@@ -9,11 +9,9 @@ class VlIcon extends VlElement {
         return 'vl-vi-';
     }
 
-    async getIcon() {
+    async getType() {
         const classList = await this.getClassList();
-        return classList.find((clazz) => {
-            return clazz.includes(this._iconPrefix);
-        }).substring(this._iconPrefix.length);
+        return classList.find(clazz => clazz.startsWith(this._iconPrefix)).substring(this._iconPrefix.length);
     }
 
     async isBefore() {
