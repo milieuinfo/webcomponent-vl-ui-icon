@@ -9,25 +9,21 @@ class VlIcon extends VlElement {
     return 'vl-vi-';
   }
 
-  get _attributePrefix() {
-    return 'data-vl-';
-  }
-
   async getType() {
     const classList = await this.getClassList();
     return classList.find((clazz) => clazz.startsWith(this._iconPrefix)).substring(this._iconPrefix.length);
   }
 
   async isBefore() {
-    return this.hasAttribute(this._attributePrefix + 'before');
+    return this.hasAttribute('before');
   }
 
   async isAfter() {
-    return this.hasAttribute(this._attributePrefix + 'after');
+    return this.hasAttribute('after');
   }
 
   async getSize() {
-    return this.getAttribute(this._attributePrefix + 'size');
+    return this.getAttribute('size');
   }
 
   async isSmallSize() {
@@ -39,15 +35,15 @@ class VlIcon extends VlElement {
   }
 
   async isLight() {
-    return this.hasAttribute(this._attributePrefix + 'light');
+    return this.hasAttribute('light');
   }
 
   async is90Degrees() {
-    return this.hasAttribute(this._attributePrefix + '90deg');
+    return this.hasAttribute('90deg');
   }
 
   async is180Degrees() {
-    return this.hasAttribute(this._attributePrefix + '180deg');
+    return this.hasAttribute('180deg');
   }
 }
 
