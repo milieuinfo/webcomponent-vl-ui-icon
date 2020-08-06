@@ -75,12 +75,12 @@
           assert.isFalse(icon.classList.contains('vl-icon--' + attribuut));
           icon.setAttribute(`data-vl-${attribuut}`, '');
           assert.isTrue(icon.classList.contains('vl-icon--' + attribuut));
-          icon.removeAttribute(attribuut);
+          icon.removeAttribute(`data-vl-${attribuut}`);
           assert.isFalse(icon.classList.contains('vl-icon--' + attribuut));
         });
       });
 
-      test('met een link attribuut past de class attributen aan om de stjil te garanderen', (done) => {
+      test('met een link attribuut past de class attributen aan om de stijl te garanderen', (done) => {
         const icon = fixture('vl-icon-fixture-link');
         setTimeout(() => {
           ['vl-icon', 'vl-icon--small', 'vl-icon--light', 'vl-icon--before'].forEach((value) => {
