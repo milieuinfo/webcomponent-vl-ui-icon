@@ -71,9 +71,9 @@
 
       test('krijgt de juiste class wanneer het icon een attribuut bevat', () => {
         const icon = fixture('vl-icon-fixture');
-        ['data-vl-before', 'data-vl-after', 'data-vl-light'].forEach((attribuut) => {
+        ['before', 'after', 'light'].forEach((attribuut) => {
           assert.isFalse(icon.classList.contains('vl-icon--' + attribuut));
-          icon.setAttribute(attribuut, '');
+          icon.setAttribute(`data-vl-${attribuut}`, '');
           assert.isTrue(icon.classList.contains('vl-icon--' + attribuut));
           icon.removeAttribute(attribuut);
           assert.isFalse(icon.classList.contains('vl-icon--' + attribuut));
