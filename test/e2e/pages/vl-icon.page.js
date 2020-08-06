@@ -10,26 +10,6 @@ class VlIconPage extends Page {
     return this._getIcon('#icon');
   }
 
-  async getSmallIcon() {
-    return this._getIcon('#icon-small');
-  }
-
-  async getLightIcon() {
-    return this._getIcon('#icon-light');
-  }
-
-  async getLargeIcon() {
-    return this._getIcon('#icon-large');
-  }
-
-  async getIcon90() {
-    return this._getIcon('#icon-90');
-  }
-
-  async getIcon180() {
-    return this._getIcon('#icon-180');
-  }
-
   async getIconBefore() {
     return this._getIcon('#icon-before');
   }
@@ -38,8 +18,24 @@ class VlIconPage extends Page {
     return this._getIcon('#icon-after');
   }
 
-  async getIconAfterFlex() {
-    return this._getIcon('#icon-after-flex');
+  async getSmallIcon() {
+    return this._getIcon('#icon-small');
+  }
+
+  async getLargeIcon() {
+    return this._getIcon('#icon-large');
+  }
+
+  async getLightIcon() {
+    return this._getIcon('#icon-light');
+  }
+
+  async getIcon90() {
+    return this._getIcon('#icon-90');
+  }
+
+  async getIcon180() {
+    return this._getIcon('#icon-180');
   }
 
   async load() {
