@@ -13,8 +13,7 @@ import {nativeVlElement, define} from '/node_modules/vl-ui-core/dist/vl-core.js'
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-icon.html|Demo}
  */
 export class VlIconWrapper extends nativeVlElement(HTMLParagraphElement) {
-  constructor() {
-    super();
+  connectedCallback() {
     this._addClass();
   }
 
