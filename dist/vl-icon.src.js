@@ -3,9 +3,10 @@ import {nativeVlElement, define} from 'vl-ui-core';
 /**
  * VlIcon
  * @class
- * @classdesc Gebruik de vl-icon om een extra visueel element toe te voegen.
+ * @classdesc Gebruik een vl-icon om een extra visueel element toe te voegen.
  *
  * @extends HTMLSpanElement
+ * @mixes nativeVlElement
  *
  * @property {string} icon - Attribuut wordt gebruikt om aan te geven welk icoon getoond moet worden.
  * @property {(small | large)} size - Attribuut wordt gebruikt om het icoon te verkleinen (80%) of te vergroten (120%) ten opzichte van de parent.
