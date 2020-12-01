@@ -1,11 +1,12 @@
 
-const {assert, driver} = require('vl-ui-core').Test.Setup;
+const {assert, getDriver} = require('vl-ui-core').Test.Setup;
 const VlIconPage = require('./pages/vl-icon.page');
 
 describe('vl-icon', async () => {
-  const vlIconPage = new VlIconPage(driver);
+  let vlIconPage;
 
   before(() => {
+    vlIconPage = new VlIconPage(getDriver());
     return vlIconPage.load();
   });
 
