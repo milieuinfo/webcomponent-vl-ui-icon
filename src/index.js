@@ -1,4 +1,1 @@
-module.exports = {
-  VlIcon: require('../dist/vl-icon.src.js').VlIcon,
-}
-;
+export * from '../dist/vl-icon-all.src.js';
