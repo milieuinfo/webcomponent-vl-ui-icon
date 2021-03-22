@@ -10,6 +10,10 @@ describe('vl-icon', async () => {
     return vlIconPage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlIconPage.hasWcagIssues());
+  });
+
   it('als gebruiker kan ik een icoon zien', async () => {
     const icon = await vlIconPage.getIcon();
     await assert.eventually.equal(icon.getType(), 'calendar');
